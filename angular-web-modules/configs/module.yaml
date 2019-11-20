@@ -1,0 +1,66 @@
+# A module is a single page application hosting directory and caters to
+# functionalit surrounding a single functional module of the application.
+#
+# A boilerplate directory structure of a module looks like the following:
+#
+# /static/views/<moduleName>
+#   +-- js
+#   |    +-- controller.js
+#   |    +-- directive.js
+#   |    +-- route.js
+#   |    +-- filter.js
+#   |-- template
+#   |    +-- prune-guard.txt
+#   +-- <moduleName>.html
+env :
+    projectDisplayName : Capitalyst
+    projectName : CapitalystServer
+    moduleDirName : account
+    moduleId : Account
+    baseNgApp : capitalystNgApp
+    projectHome : /Users/sandeep/projects/source/${env.projectName}
+    viewsDir : ${env.projectHome}/src/main/resources/static/views
+    moduleDirPath : ${env.viewsDir}/${env.moduleDirName}
+    routeTemplateBasePath : /views/${env.moduleDirName}/template/
+
+templateDir : /Users/sandeep/projects/source/CodeGenConfigs/angular-web-modules/templates
+
+mkdirsConfig :
+    baseDirectory : ${env.moduleDirPath}
+    directories :
+        - js
+        - template
+    
+transformations :
+   - template : tile.st
+     params :
+        tileName : Account
+        targetHTMLFile : /views/account/account.html
+        
+   - template : controller.st
+     destination : ${env.moduleDirPath}/js/controller.js
+     params :
+        title : Account
+        controllerName : ${env.moduleId}Controller
+        
+   - template : directive.st
+     destination : ${env.moduleDirPath}/js/directive.js
+        
+   - template : route.st
+     destination : ${env.moduleDirPath}/js/route.js
+     params :
+        routeDefinitions :
+           - routePath : /
+             templateUrl : ${env.routeTemplateBasePath}/${env.moduleDirName}-home.html
+             controllerName : ${env.moduleId}HomeController
+
+   - template : filter.st
+     destination : ${env.moduleDirPath}/js/filter.js
+
+   - template : prune-guard.st
+     destination : ${env.moduleDirPath}/template/prune-guard.txt
+     
+   - template : index-html.st
+     destination : ${env.moduleDirPath}/${env.moduleDirName}.html
+     params :
+        pageTitle : ${env.moduleId}
