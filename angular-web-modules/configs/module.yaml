@@ -21,9 +21,12 @@ env :
     projectHome : /Users/sandeep/projects/source/${env.projectName}
     viewsDir : ${env.projectHome}/src/main/resources/static/views
     moduleDirPath : ${env.viewsDir}/${env.moduleDirName}
-    routeTemplateBasePath : /views/${env.moduleDirName}/template/
+    routeTemplateBasePath : /views/${env.moduleDirName}/template
+    codegenProjectHome : /Users/sandeep/projects/source/CodeGenConfigs/angular-web-modules 
 
-templateDir : /Users/sandeep/projects/source/CodeGenConfigs/angular-web-modules/templates
+templateDir : ${env.codegenProjectHome}/templates
+
+extHandlerDir : ${env.codegenProjectHome}/ext-handlers
 
 mkdirsConfig :
     baseDirectory : ${env.moduleDirPath}
@@ -32,35 +35,41 @@ mkdirsConfig :
         - template
     
 transformations :
-   - template : tile.st
+   - template : js/tile
      params :
         tileName : Account
         targetHTMLFile : /views/account/account.html
         
-   - template : controller.st
+   - template : js/controller
      destination : ${env.moduleDirPath}/js/controller.js
      params :
         title : Account
         controllerName : ${env.moduleId}Controller
         
-   - template : directive.st
+   - template : js/directive
      destination : ${env.moduleDirPath}/js/directive.js
         
-   - template : route.st
+   - template : js/route
      destination : ${env.moduleDirPath}/js/route.js
+     extHandler : route-definitions-handler
      params :
         routeDefinitions :
            - routePath : /
-             templateUrl : ${env.routeTemplateBasePath}/${env.moduleDirName}-home.html
+             templateUrl : ${env.routeTemplateBasePath}/${env.moduleId}Home.html
              controllerName : ${env.moduleId}HomeController
 
-   - template : filter.st
+   - template : js/filter
      destination : ${env.moduleDirPath}/js/filter.js
 
-   - template : prune-guard.st
+   - template : prune-guard
      destination : ${env.moduleDirPath}/template/prune-guard.txt
      
-   - template : index-html.st
+   - template : html/index-html
      destination : ${env.moduleDirPath}/${env.moduleDirName}.html
      params :
         pageTitle : ${env.moduleId}
+        
+
+        
+        
+        

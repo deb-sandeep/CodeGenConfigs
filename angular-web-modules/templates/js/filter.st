@@ -1,5 +1,5 @@
 /*
-%env.baseNgApp%.filter( "<filter name>", function() {
+$env.baseNgApp$.filter( "<filter name>", function() {
     return function( <param> ) {
         var fmt = "" ;
         return fmt ;
