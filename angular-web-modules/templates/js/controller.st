@@ -22,6 +22,7 @@ $env.baseNgApp$.controller( '$controllerName$',
     
     // ----------- UI related scope functions --------------------------------
     \$scope.addErrorAlert = function( msgString ) {
+        console.log( msgString ) ;
         \$scope.alerts.push( { type: 'danger', msg: msgString } ) ;
     } ;
     

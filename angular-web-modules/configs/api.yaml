@@ -1,0 +1,17 @@
+# This generates the skeleton for a Rest API definition. Outputs to console
+
+env :
+    projectHomeDir : /Users/sandeep/projects/source/CodeGenConfigs/
+    codegenProjectHome : ${env.projectHomeDir}/angular-web-modules 
+
+templateDir : ${env.codegenProjectHome}/templates
+
+transformations :
+   - template : java/api-method
+     params :
+       apiType : Get
+       url : /Account
+       returnType : List<Account>
+       #requestBodyType : Account
+       methodName : getAccountSumamries
+       message : Getting account summaries

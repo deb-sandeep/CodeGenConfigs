@@ -4,6 +4,7 @@ $env.baseNgApp$.controller( '$controllerName$',
     // ---------------- Local variables --------------------------------------
     
     // ---------------- Scope variables --------------------------------------
+    $scope.$parent.navBarTitle = "$controllerName$" ;
 
     // -----------------------------------------------------------------------
     // --- [START] Controller initialization ---------------------------------
@@ -36,9 +37,7 @@ $env.baseNgApp$.controller( '$controllerName$',
                 // TODO: Server data processing logic
             }, 
             function( error ){
-                var errMsg = "<Error Message>" ;
-                console.log( errMsg ) ;
-                \$scope.\$parent.addErrorAlert( errMsg ) ;
+                \$scope.\$parent.addErrorAlert( "<Error Message>" ) ;
             }
         )
         .finally(function() {
