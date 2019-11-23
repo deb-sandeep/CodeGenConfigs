@@ -1,0 +1,20 @@
+# This generates the skeleton for a Rest API definition. Outputs to console
+
+env :
+    projectHomeDir : /Users/sandeep/projects/source/CodeGenConfigs/
+    codegenProjectHome : ${env.projectHomeDir}/angular-web-modules 
+
+templateDir : ${env.codegenProjectHome}/templates
+
+extHandlerDir : ${env.codegenProjectHome}/ext-handlers
+
+transformations :
+   - template : java/java-bean
+     params :
+       className : Person
+       attributes :
+         - String firstName
+         - String lastName
+         - Integer age
+         - float salary
+         - boolean firangi
