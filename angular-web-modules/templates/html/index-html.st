@@ -5,10 +5,12 @@
     <meta charset="ISO-8859-1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>$pageTitle$</title>
+    <script src="/js/lib/jquery/jquery.min.js"></script>
     <script src="/js/lib/angular/angular.min.js"></script>
     <script src="/js/lib/angular/angular-route.min.js"></script>
-    <script src="/js/lib/jquery/jquery.min.js"></script>
+    <script src="/js/lib/angular/confirm/angular-confirm.min.js"></script>
     <script src="/js/lib/bootstrap/bootstrap.min.js"></script>
+    <script src="/js/lib/sort-table/sort-table.min.js"></script>
     
     <link rel="stylesheet" href="/js/lib/bootstrap/bootstrap.min.css"/>
     <link rel="stylesheet" href="/css/app/app.css"/>
@@ -44,6 +46,12 @@
 </div>
 
 <div ng-view></div>
+
+<div id="serverInteractionLoader" 
+     class="modal loader" 
+     role="dialog"
+     data-backdrop="static">
+</div>
 
 </body>
 </html>

@@ -51,7 +51,7 @@ function createEndAttr( attrDef ) {
         enhAttr.defaultVal = '0' ;
     }
     else if( enhAttr.type == 'float' ) {
-        enhAttr.defaultVal = '0.0' ;
+        enhAttr.defaultVal = '0.0f' ;
     }
     else if( enhAttr.type == 'double' ) {
         enhAttr.defaultVal = '0.0' ;

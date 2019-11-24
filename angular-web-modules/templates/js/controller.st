@@ -8,7 +8,6 @@ $env.baseNgApp$.controller( '$controllerName$',
     // Common framework variables. 
     \$scope.alerts = [] ;
     \$scope.navBarTitle = "<Fill navbar title>" ;
-    \$scope.interactingWithServer = false ;
     
     // -----------------------------------------------------------------------
     // --- [START] Controller initialization ---------------------------------
@@ -19,7 +18,16 @@ $env.baseNgApp$.controller( '$controllerName$',
     
     // -----------------------------------------------------------------------
     // --- [START] Scope functions -------------------------------------------
-    
+    \$scope.\$on( 'interactingWithServer', function( event, args ) {
+        console.log( "Interacting with server = " + args.isStart ) ;
+        if( args.isStart ) {
+            \$( '#serverInteractionLoader' ).modal( 'show' ) ;
+        }
+        else {
+            \$( '#serverInteractionLoader' ).modal( 'hide' ) ;
+        }
+    } ) ;
+
     // ----------- UI related scope functions --------------------------------
     \$scope.addErrorAlert = function( msgString ) {
         console.log( msgString ) ;

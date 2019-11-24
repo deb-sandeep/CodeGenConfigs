@@ -11,10 +11,11 @@ extHandlerDir : ${env.codegenProjectHome}/ext-handlers
 transformations :
    - template : java/java-bean
      params :
-       className : Person
+       className : Individual
        attributes :
+         - Integer id
          - String firstName
          - String lastName
-         - Integer age
-         - float salary
-         - boolean firangi
+         - Date dob
+         - String panNumber
+         - String aadharNumber

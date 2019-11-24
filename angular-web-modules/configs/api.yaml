@@ -9,9 +9,9 @@ templateDir : ${env.codegenProjectHome}/templates
 transformations :
    - template : java/api-method
      params :
-       apiType : Get
+       apiType : Post
        url : /Account
-       returnType : List<Account>
-       #requestBodyType : Account
-       methodName : getAccountSumamries
-       message : Getting account summaries
+       returnType : Account
+       requestBodyType : Account
+       methodName : saveAccount
+       message : Saving account data

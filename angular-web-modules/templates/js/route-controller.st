@@ -27,7 +27,7 @@ $env.baseNgApp$.controller( '$controllerName$',
     /* Template server communication function
     function <serverComm>() {
         
-        \$scope.\$parent.interactingWithServer = true ;
+        \$scope.\$emit( 'interactingWithServer', { isStart : true } ) ;
         \$http.post( '/<API endpoint>', {
             'eventId'       : eventId,
         } )
@@ -41,7 +41,7 @@ $env.baseNgApp$.controller( '$controllerName$',
             }
         )
         .finally(function() {
-            \$scope.\$parent.interactingWithServer = false ;
+            \$scope.\$emit( 'interactingWithServer', { isStart : false } ) ;
         }) ;
     }
     */
