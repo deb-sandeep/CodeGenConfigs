@@ -11,11 +11,9 @@ extHandlerDir : ${env.codegenProjectHome}/ext-handlers
 transformations :
    - template : java/java-bean
      params :
-       className : Individual
+       className : LedgerSearchCriteria
        attributes :
-         - Integer id
-         - String firstName
-         - String lastName
-         - Date dob
-         - String panNumber
-         - String aadharNumber
+         - String accountId
+         - Date startDate
+         - Date endDate
+         - Float amtThreshold
