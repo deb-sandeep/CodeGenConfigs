@@ -4,7 +4,7 @@ $env.baseNgApp$.controller( '$controllerName$',
     // ---------------- Local variables --------------------------------------
     
     // ---------------- Scope variables --------------------------------------
-    $scope.$parent.navBarTitle = "$controllerName$" ;
+    \$scope.\$parent.navBarTitle = "$controllerName$" ;
 
     // -----------------------------------------------------------------------
     // --- [START] Controller initialization ---------------------------------

@@ -15,8 +15,8 @@
 env :
     projectDisplayName : Capitalyst
     projectName : CapitalystServer
-    moduleDirName : account
-    moduleId : Account
+    moduleDirName : ledger
+    moduleId : Ledger
     baseNgApp : capitalystNgApp
     projectHome : /Users/sandeep/projects/source/${env.projectName}
     viewsDir : ${env.projectHome}/src/main/resources/static/views
@@ -37,13 +37,13 @@ mkdirsConfig :
 transformations :
    - template : js/tile
      params :
-        tileName : Account
-        targetHTMLFile : /views/account/account.html
+        tileName : ${env.moduleId}
+        targetHTMLFile : /views/${env.moduleDirName}/${env.moduleDirName}.html
         
    - template : js/controller
      destination : ${env.moduleDirPath}/js/controller.js
      params :
-        title : Account
+        title : ${env.moduleId}
         controllerName : ${env.moduleId}Controller
         
    - template : js/directive
@@ -61,9 +61,6 @@ transformations :
    - template : js/filter
      destination : ${env.moduleDirPath}/js/filter.js
 
-   - template : prune-guard
-     destination : ${env.moduleDirPath}/template/prune-guard.txt
-     
    - template : html/index-html
      destination : ${env.moduleDirPath}/${env.moduleDirName}.html
      params :
