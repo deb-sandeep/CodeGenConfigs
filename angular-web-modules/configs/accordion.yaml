@@ -12,9 +12,6 @@ transformations :
    - template : html/accordion
      params :
         sections :
-           - title : Duration
-             divId : durationSelection
-             
-           - title : Amount
-             divId : amtThreshold
+           - title : Custom Rule
+             divId : customRuleDiv
              

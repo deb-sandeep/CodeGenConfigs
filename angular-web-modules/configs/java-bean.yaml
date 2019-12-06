@@ -11,9 +11,17 @@ extHandlerDir : ${env.codegenProjectHome}/ext-handlers
 transformations :
    - template : java/java-bean
      params :
-       className : LedgerSearchCriteria
+       className : FixedDeposit
        attributes :
-         - String accountId
-         - Date startDate
-         - Date endDate
-         - Float amtThreshold
+         - Integer id
+         - Account baseAccount
+         - Date openDate
+         - Date matureDate
+         - int openAmt
+         - int matureAmt
+         - boolean autoRenew
+         - float interestRate
+         - int recurringAmt
+         - int recurringDom
+         
+         
