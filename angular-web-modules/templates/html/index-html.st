@@ -5,17 +5,25 @@
     <meta charset="ISO-8859-1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>$pageTitle$</title>
-    <script src="/js/lib/jquery/jquery.min.js"></script>
+    <script src="/js/lib/jquery/jquery-2.1.1.min.js"></script>
     <script src="/js/lib/angular/angular.min.js"></script>
     <script src="/js/lib/angular/angular-route.min.js"></script>
     <script src="/js/lib/angular/confirm/angular-confirm.min.js"></script>
+    <script src="/js/lib/moment/moment.min.js"></script>
     <script src="/js/lib/bootstrap/bootstrap.min.js"></script>
-    <script src="/js/lib/sort-table/sort-table.min.js"></script>
-    
+    <script src="/js/lib/bootstrap/bootstrap-datetimepicker.js"></script>
+    <script src="/js/lib/ng-file-upload/ng-file-upload.min.js"></script>
+
     <link rel="stylesheet" href="/js/lib/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/js/lib/bootstrap/bootstrap-datetimepicker.css"/>
+    <link rel="stylesheet" href="/js/lib/angular/confirm/angular-confirm.min.css"/>
+    
     <link rel="stylesheet" href="/css/app/app.css"/>
+    <link rel="stylesheet" href="/css/app/form.css"/>
     
     <script src="/js/app/app-ng.js"></script>
+    <script src="/js/app/filter.js"></script>
+    
     <script src="/views/$env.moduleDirName$/js/controller.js"></script>
     <script src="/views/$env.moduleDirName$/js/directive.js"></script>
     <script src="/views/$env.moduleDirName$/js/route.js"></script>

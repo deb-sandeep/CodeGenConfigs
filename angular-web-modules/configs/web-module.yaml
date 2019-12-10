@@ -15,8 +15,8 @@
 env :
     projectDisplayName : Capitalyst
     projectName : CapitalystServer
-    moduleDirName : ledger
-    moduleId : Ledger
+    moduleDirName : cash_entry
+    moduleId : CashEntry
     baseNgApp : capitalystNgApp
     projectHome : /Users/sandeep/projects/source/${env.projectName}
     viewsDir : ${env.projectHome}/src/main/resources/static/views

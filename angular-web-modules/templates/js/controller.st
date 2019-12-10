@@ -1,5 +1,5 @@
 $env.baseNgApp$.controller( '$controllerName$', 
-    function( \$scope, \$http, \$rootScope, \$location, \$window ) {
+    function( \$scope, \$http, \$rootScope, \$location, \$window, \$ngConfirm ) {
     
     // ---------------- Local variables --------------------------------------
     
