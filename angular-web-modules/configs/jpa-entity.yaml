@@ -1,0 +1,26 @@
+# This generates the skeleton for a Rest API definition. Outputs to console
+
+env :
+    projectHomeDir : /Users/sandeep/projects/source/CodeGenConfigs/
+    codegenProjectHome : ${env.projectHomeDir}/angular-web-modules 
+
+templateDir : ${env.codegenProjectHome}/templates
+
+extHandlerDir : ${env.codegenProjectHome}/ext-handlers
+
+transformations :
+   - template : java/jpa-entity
+     params :
+       tableName : mf_master
+       className : MutualFund
+       attributes :
+         - String fundName
+         - String isin
+         - String description
+         - String category
+         - String distributionType
+         - String structure
+         - float latestNav
+         - Date lastUpdate 
+         
+         
