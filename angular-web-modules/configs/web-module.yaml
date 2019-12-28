@@ -15,8 +15,8 @@
 env :
     projectDisplayName : Capitalyst
     projectName : CapitalystServer
-    moduleDirName : cash_entry
-    moduleId : CashEntry
+    moduleDirName : txn_pivot
+    moduleId : TxnPivot
     baseNgApp : capitalystNgApp
     projectHome : /Users/sandeep/projects/source/${env.projectName}
     viewsDir : ${env.projectHome}/src/main/resources/static/views
