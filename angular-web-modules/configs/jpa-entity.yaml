@@ -11,16 +11,16 @@ extHandlerDir : ${env.codegenProjectHome}/ext-handlers
 transformations :
    - template : java/jpa-entity
      params :
-       tableName : mf_master
-       className : MutualFund
+       tableName : mf_txn
+       className : MutualFundTxn
        attributes :
-         - String fundName
-         - String isin
-         - String description
-         - String category
-         - String distributionType
-         - String structure
-         - float latestNav
-         - Date lastUpdate 
+         - String ownerName
+         - String scheme
+         - String txnType
+         - String txnChannel
+         - Date txnDate
+         - float navPerUnit
+         - float numUnits
+         - float amount
          
          
