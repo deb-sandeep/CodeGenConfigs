@@ -11,16 +11,15 @@ extHandlerDir : ${env.codegenProjectHome}/ext-handlers
 transformations :
    - template : java/jpa-entity
      params :
-       tableName : mf_txn
-       className : MutualFundTxn
+       tableName : equity_txn
+       className : EquityTxn
        attributes :
-         - String ownerName
-         - String scheme
-         - String txnType
-         - String txnChannel
-         - Date txnDate
-         - float navPerUnit
-         - float numUnits
-         - float amount
-         
-         
+          - int holdingId
+          - String action
+          - int quantity
+          - float txnPrice
+          - float brokerage
+          - float txnCharges
+          - float stampDuty
+          - date txnDate
+          - String hashhh
